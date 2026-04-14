@@ -1,0 +1,236 @@
+/* ── Admin Orders Page Styles ─────────────────────────────────── */
+
+/* ── Status Pills Row ────────────────────────────────────────── */
+.order-status-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.status-pill {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.4rem 0.9rem;
+  border-radius: 50px;
+  border: 1.5px solid var(--border);
+  background: transparent;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition);
+  text-transform: capitalize;
+  font-family: inherit;
+}
+.status-pill span {
+  background: var(--bg-muted);
+  border-radius: 50px;
+  padding: 0.1rem 0.45rem;
+  font-size: 0.72rem;
+}
+.status-pill:hover, .status-pill.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #fff;
+}
+.status-pill.active span { background: rgba(255,255,255,0.25); }
+
+/* ── Order Cards List ────────────────────────────────────────── */
+.orders-admin-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.order-admin-card {
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+}
+
+/* ── Order Summary Row ───────────────────────────────────────── */
+.order-admin-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 1fr 100px 200px 44px;
+  gap: 1rem;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  transition: background var(--transition);
+}
+.order-admin-row:hover { background: var(--bg-muted); }
+
+.order-admin-id { display: flex; flex-direction: column; gap: 0.2rem; }
+.order-admin-date { font-size: 0.78rem; color: var(--text-muted); }
+
+/* ── Customer Cell ───────────────────────────────────────────── */
+.order-admin-customer {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+.customer-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  color: #fff;
+  font-size: 0.9rem;
+  flex-shrink: 0;
+}
+.customer-name  { font-size: 0.88rem; font-weight: 600; color: var(--text-primary); }
+.customer-email { font-size: 0.75rem; color: var(--text-muted); }
+
+/* ── Items Preview ───────────────────────────────────────────── */
+.order-admin-items-preview {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+.order-item-count {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.order-admin-total {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--primary);
+}
+
+/* ── Status Select Dropdown ──────────────────────────────────── */
+.order-status-control {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.status-select {
+  width: 100%;
+  padding: 0.4rem 0.75rem;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border);
+  font-size: 0.82rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all var(--transition);
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236b6b80' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  background-size: 14px;
+  padding-right: 2rem;
+}
+
+.status-select.status-pending    { background-color: #fef3c7; color: #92400e; border-color: #fcd34d; }
+.status-select.status-processing { background-color: #dbeafe; color: #1e40af; border-color: #93c5fd; }
+.status-select.status-shipped    { background-color: #ede9fe; color: #5b21b6; border-color: #c4b5fd; }
+.status-select.status-delivered  { background-color: #dcfce7; color: #166534; border-color: #86efac; }
+.status-select.status-cancelled  { background-color: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+
+.updating-spinner {
+  width: 18px;
+  height: 18px;
+  border: 2px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  flex-shrink: 0;
+}
+
+/* ── Expand Toggle ───────────────────────────────────────────── */
+.expand-toggle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--border);
+  background: var(--bg-muted);
+  font-size: 0.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition);
+  color: var(--text-muted);
+  flex-shrink: 0;
+}
+.expand-toggle:hover { background: var(--primary-light); color: var(--primary); }
+
+/* ── Expanded Content ────────────────────────────────────────── */
+.order-admin-details {
+  padding: 1.25rem 1.5rem;
+}
+
+.order-admin-expand-grid {
+  display: grid;
+  grid-template-columns: 1fr 280px;
+  gap: 2rem;
+}
+
+.admin-order-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.7rem;
+  background: var(--bg-muted);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+}
+.admin-order-item img {
+  width: 48px;
+  height: 56px;
+  border-radius: 6px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+.admin-order-item-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+.admin-order-item-meta {
+  font-size: 0.76rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.shipping-info {
+  background: var(--bg-muted);
+  padding: 0.85rem 1rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: var(--text-secondary);
+}
+
+/* ── Responsive ──────────────────────────────────────────────── */
+@media (max-width: 1100px) {
+  .order-admin-row {
+    grid-template-columns: 150px 1fr 120px 44px;
+  }
+  .order-admin-items-preview,
+  .order-admin-total { display: none; }
+}
+
+@media (max-width: 700px) {
+  .order-admin-row {
+    grid-template-columns: 1fr auto 44px;
+    gap: 0.75rem;
+  }
+  .order-admin-id { font-size: 0.8rem; }
+  .order-admin-customer { display: none; }
+  .order-admin-expand-grid { grid-template-columns: 1fr; }
+}

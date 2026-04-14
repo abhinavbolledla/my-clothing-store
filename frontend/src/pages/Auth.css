@@ -1,0 +1,72 @@
+/* ── Auth Page Styles ─────────────────────────────────────────── */
+.auth-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f5f3ff 0%, #ede9ff 50%, #fdf4ff 100%);
+  padding: 2rem;
+}
+
+.auth-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 420px;
+  border: 1px solid var(--border);
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.auth-logo {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
+  display: block;
+  animation: fadeIn 0.5s ease;
+}
+
+.auth-header h1 {
+  font-size: 1.7rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.35rem;
+}
+
+.auth-header p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--text-muted);
+}
+.auth-footer a {
+  color: var(--primary);
+  font-weight: 600;
+}
+.auth-footer a:hover { text-decoration: underline; }
+
+.demo-creds {
+  margin-top: 1.25rem;
+  padding: 0.85rem 1rem;
+  background: var(--primary-light);
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  color: var(--primary-dark);
+  line-height: 1.7;
+  border: 1px solid #d4cbff;
+}
+.demo-creds strong { display: block; margin-bottom: 0.25rem; }

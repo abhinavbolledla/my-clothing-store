@@ -1,0 +1,61 @@
+/* ── Admin Products Page Styles ───────────────────────────────── */
+.admin-search-bar {
+  margin-bottom: 1.5rem;
+  max-width: 400px;
+}
+
+/* ── Product Table Cells ─────────────────────────────────────── */
+.product-thumb {
+  width: 48px;
+  height: 58px;
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  border: 1px solid var(--border);
+}
+
+.product-table-name {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.88rem;
+  margin-bottom: 0.2rem;
+}
+
+.product-table-sizes {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* ── Stock Status ────────────────────────────────────────────── */
+.stock-ok  { color: var(--success); font-weight: 700; }
+.stock-low { color: var(--warning); font-weight: 700; }
+.stock-out { color: var(--danger);  font-weight: 700; }
+
+/* ── Toggle Button ───────────────────────────────────────────── */
+.toggle-btn {
+  font-size: 0.78rem;
+  font-weight: 700;
+  padding: 0.3rem 0.7rem;
+  border-radius: 50px;
+  border: 1.5px solid;
+  cursor: pointer;
+  transition: all var(--transition);
+  white-space: nowrap;
+  background: none;
+  font-family: inherit;
+}
+.toggle-btn.active   { color: var(--success); border-color: var(--success); }
+.toggle-btn.inactive { color: var(--text-muted); border-color: var(--border); }
+.toggle-btn:hover { opacity: 0.75; }
+
+/* ── Action Buttons ──────────────────────────────────────────── */
+.action-btns {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+/* ── Inactive Row ────────────────────────────────────────────── */
+.row-inactive {
+  opacity: 0.55;
+  background: var(--bg-muted);
+}
