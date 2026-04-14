@@ -23,7 +23,7 @@ const ProductCard = ({ product, onAddToCart }) => {
           className="product-card-img"
           loading="lazy"
           onError={(e) => {
-            e.target.src = 'https://via.placeholder.com/400x500?text=No+Image';
+           e.target.src = 'https://placehold.co';
           }}
         />
         {/* Badges */}
